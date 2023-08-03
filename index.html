@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Drum Machine</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container" id="drum-machine">
+        <h1 class="text-center">The Drum Machine</h1>
+        <div class="card my-3">
+            <div class="card-body">
+                <div class="text-center" id="display">Display</div>
+
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="drum-pad btn btn-primary" id="drum-0" onclick="play('Q')">
+                Q
+                <audio src="./clip/Q.m4a" class="clip" id="Q"></audio>
+            </button>
+            <button class="drum-pad btn btn-primary" id="drum-1" onclick="play('W')">
+                W
+                <audio src="./clip/W.m4a" class="clip" id="W"></audio>
+            </button>
+            <button class="drum-pad btn btn-primary" id="drum-2" onclick="play('E')">
+                E
+                <audio src="./clip/E.m4a" class="clip" id="E"></audio>
+            </button>
+            <button class="drum-pad btn btn-primary" id="drum-3" onclick="play('A')">
+                A
+                <audio src="./clip/A.m4a" class="clip" id="A"></audio>
+            </button>
+            <button class="drum-pad btn btn-primary" id="drum-4" onclick="play('S')">
+                S
+                <audio src="./clip/S.m4a" class="clip" id="S"></audio>
+            </button>
+            <button class="drum-pad btn btn-primary" id="drum-5" onclick="play('D')">
+                D
+                <audio src="./clip/D.m4a" class="clip" id="D"></audio>
+            </button>
+            <button class="drum-pad btn btn-primary" id="drum-6" onclick="play('Z')">
+                Z
+                <audio src="./clip/Z.m4a" class="clip" id="Z"></audio>
+            </button>
+            <button class="drum-pad btn btn-primary" id="drum-7" onclick="play('X')">
+                X
+                <audio src="./clip/X.m4a" class="clip" id="X"></audio>
+            </button>
+            <button class="drum-pad btn btn-primary" id="drum-8" onclick="play('C')">
+                C
+                <audio src="./clip/C.m4a" class="clip" id="C"></audio>
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script>
+        function play(str){
+            var audio = document.getElementById(str);
+            document.getElementById('display').innerHTML = str;
+            audio.play();
+        }
+
+        window.document.onkeyup = function(event){
+            let keystroke = event.key;
+            if(keystroke === "q" || keystroke === "Q")
+            {
+                play("Q")
+            }
+            if(keystroke === "w" || keystroke === "W")
+            {
+                play("W")
+            }
+            if(keystroke === "e" || keystroke === "E")
+            {
+                play("E")
+            }
+            if(keystroke === "a" || keystroke === "A")
+            {
+                play("A")
+            }
+            if(keystroke === "s" || keystroke === "S")
+            {
+                play("S")
+            }
+            if(keystroke === "d" || keystroke === "D")
+            {
+                play("D")
+            }
+            if(keystroke === "z" || keystroke === "Z")
+            {
+                play("Z")
+            }
+            if(keystroke === "x" || keystroke === "X")
+            {
+                play("X")
+            }
+            if(keystroke === "c" || keystroke === "C")
+            {
+                play("C")
+            }
+        }
+    </script>
+</body>
+</html>
